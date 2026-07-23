@@ -2,6 +2,13 @@ api = input("请输入名字:")
 print(api)
 print(type(api))
 
+a = """
+    hello world
+    你好
+    我是python三引号字符串
+    """
+print(a)
+
 #运算
 a = 10
 b = 3
