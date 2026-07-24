@@ -8,6 +8,8 @@ a = """
     我是python三引号字符串
     """
 print(a)
+b = "hello python"
+print(f"我是:{a}&{b}")
 
 #运算
 a = 10
