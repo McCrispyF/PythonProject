@@ -11,11 +11,16 @@ for i in range(len(nums)):
     for j in range(i+1,len(nums)):
         if nums[i] + nums[j] == target:
             print(i,j)
-"""
-
+-------------------------------------
 a = int(input("请输入长度："))
 b = int(input("请输入宽度："))
 for i in range(a):
     for j in range(b):
         print("*",end = "  ")
     print("\n",end = "")
+"""
+
+for i in range(1,10):
+    for j in range(1,i):
+        print(f"{j} * {i} = {i * j}",end = "  ")
+    print("")
