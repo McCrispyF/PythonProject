@@ -5,10 +5,8 @@ for i in range(1,21):
     num_list1.append(i ** 2)
 print (num_list1)
 
-
 num_list2 = [i ** 2 for i in range(1,21)]
 print (num_list2)
-
 
 #从一个数字列表中提取所有偶数，并计算其平方，组成一个新的列表
 #经典写法
