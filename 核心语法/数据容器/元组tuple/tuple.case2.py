@@ -54,10 +54,19 @@ students = (
 
 #1．计算每个学生的总分、各科平均分，然后一并输出出来。
 print("学号\t\t姓名\t\t语文\t\t数学\t\t英语\t\t总分\t\t平均分")
-for i in students:   # i 也是元组
-    total = i[2] + i[3] + i[4]
+#方式一
+# for i in students:   # i 也是元组
+#     total = i[2] + i[3] + i[4]
+#     average = total / 3
+#     print(f"{i[0]} \t {i[1]} \t {i[2]} \t {i[3]} \t {i[4]} \t {total} \t{average:.2f}")    #  {average:.2f}  保留两位小数，f代表float浮点数
+
+#方式二 元组解包
+for id_,name,chinese,math,english in students:   # i 也是元组
+    total = chinese + math + english
     average = total / 3
-    print(f"{i[0]} \t {i[1]} \t {i[2]} \t {i[3]} \t {i[4]} \t {total} \t{average:.2f}")    #  {average:.2f}  保留两位小数，f代表float浮点数
+    print(f"{id_} \t {name} \t {chinese} \t {math} \t {english} \t {total} \t{average:.2f}")
+
+
 
 print("\n\n")
 
@@ -71,8 +80,15 @@ print(f"数学的最低分：{min(list_math)}  最高分：{max(list_math)}  平
 print(f"英语的最低分：{min(list_english)}  最高分：{max(list_english)}  平均分：{sum(list_english)/len(list_english):.2f}")
 
 #3．查找成绩优秀（平均分大于 90）的学生，并输出。
-for i in students:
-    scores = [i[2], i[3], i[4]]
+
+# for i in students:
+#     scores = [i[2], i[3], i[4]]
+#     avg = sum(scores) / len(scores)
+#     if avg > 90:
+#         print(f"{i[1]}同学是优秀学生")
+
+for id_,name,chinese,math,english in students:
+    scores = [chinese, math, english]
     avg = sum(scores) / len(scores)
     if avg > 90:
-        print(f"{i[1]}同学是优秀学生")
+        print(f"{name}同学是优秀学生")
