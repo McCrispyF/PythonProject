@@ -6,7 +6,7 @@ venv/
 env/
 .Python
 *.log
-#test
+
 # IDE
 .idea/
 .vscode/
